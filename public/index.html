@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Appointment Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Medical Appointment Management</h1>
+    <nav>
+        <button onclick="showSection('patients')">Register Patient</button>
+        <button onclick="showSection('doctors')">Register Doctor</button>
+        <button onclick="showSection('appointments')">Schedule Appointment</button>
+        <button onclick="showSection('diagnoses')">Record Diagnosis</button>
+    </nav>
+    <section id="patients" class="form-section">
+        <h2>Register Patient</h2>
+        <form id="patientForm">
+            <input type="text" name="full_name" placeholder="Full Name" required><br>
+            <input type="date" name="birth_date" placeholder="Birth Date" required><br>
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="Other">Other</option>
+            </select><br>
+            <input type="text" name="contact_number" placeholder="Contact Number"><br>
+            <input type="email" name="email" placeholder="Email"><br>
+            <input type="text" name="address" placeholder="Address"><br>
+            <input type="text" name="blood_type" placeholder="Blood Type"><br>
+            <button type="submit">Register Patient</button>
+        </form>
+        <div id="patientResult"></div>
+    </section>
+    <section id="doctors" class="form-section" style="display:none">
+        <h2>Register Doctor</h2>
+        <form id="doctorForm">
+            <input type="text" name="full_name" placeholder="Full Name" required><br>
+            <input type="text" name="specialty" placeholder="Specialty" required><br>
+            <input type="text" name="phone" placeholder="Phone"><br>
+            <input type="email" name="email" placeholder="Email"><br>
+            <input type="number" name="years_experience" placeholder="Years of Experience"><br>
+            <input type="number" step="0.01" name="salary" placeholder="Salary"><br>
+            <button type="submit">Register Doctor</button>
+        </form>
+        <div id="doctorResult"></div>
+    </section>
+    <section id="appointments" class="form-section" style="display:none">
+        <h2>Schedule Appointment</h2>
+        <form id="appointmentForm">
+            <input type="date" name="date" required><br>
+            <input type="time" name="time" required><br>
+            <input type="text" name="reason" placeholder="Reason" required><br>
+            <!-- <input type="number" name="patient_id" placeholder="Patient ID" required><br>
+            <input type="number" name="doctor_id" placeholder="Doctor ID" required><br> -->
+            <button type="submit">Schedule Appointment</button>
+        </form>
+        <div id="appointmentResult"></div>
+    </section>
+    <section id="diagnoses" class="form-section" style="display:none">
+        <h2>Record Diagnosis</h2>
+        <form id="diagnosisForm">
+            <input type="number" name="appointment_id" placeholder="Appointment ID" required><br>
+            <textarea name="description" placeholder="Description" required></textarea><br>
+            <textarea name="indications" placeholder="Indications"></textarea><br>
+            <textarea name="prescription" placeholder="Prescription"></textarea><br>
+            <button type="submit">Record Diagnosis</button>
+        </form>
+        <div id="diagnosisResult"></div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

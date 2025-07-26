@@ -211,7 +211,3 @@ All endpoints accept and return JSON.
 - For any issues, check your terminal and browser console for error messages.
 
 ---
-
-## License
-
-MIT

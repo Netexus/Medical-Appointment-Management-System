@@ -1,0 +1,14 @@
+{
+  "name": "medical-management",
+  "version": "1.0.0",
+  "description": "Sistema de gestión de citas médicas para el hospital Vida Sana",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.9.7",
+    "cors": "^2.8.5"
+  }
+}
