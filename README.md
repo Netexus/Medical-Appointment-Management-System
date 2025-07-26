@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS diagnoses (
 
 ## Entity-Relationship Diagram (Graphical)
 
-![ERD Diagram](db/ERD Diagram.png)
+![ERD](db/ERD.png)
 
 ---
 
